@@ -12,8 +12,9 @@
   body.grabbing{cursor:grabbing;}
   .top-bar{position:fixed;top:0;left:0;right:0;z-index:100;background:linear-gradient(90deg,#0B1019,#121C2C 50%,#0B1019);border-bottom:1px solid #1E2D40;display:flex;align-items:center;justify-content:space-between;padding:0 10px;height:44px;}
   .top-bar h1{font-family:'Exo 2',sans-serif;font-weight:800;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--tw);white-space:nowrap;}.top-bar h1 .g{color:var(--gold);}
-  .upd-badge{display:inline-flex;align-items:center;gap:4px;background:rgba(160,180,204,0.1);border:1px solid rgba(160,180,204,0.2);padding:2px 8px;border-radius:3px;margin-left:8px;}
-  .upd-badge span{color:var(--tm);font-family:'Exo 2',sans-serif;font-size:7px;font-weight:600;letter-spacing:0.5px;}
+  .upd-badge{display:inline-flex;align-items:center;gap:4px;background:rgba(160,180,204,0.1);border:1px solid rgba(160,180,204,0.2);padding:4px 10px;border-radius:3px;margin-left:8px;}
+  .upd-badge span{color:var(--tm);font-family:'Exo 2',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.5px;}
+  @media(max-width:767px){.upd-badge span{font-size:9px;}.upd-badge{padding:3px 8px;margin-left:6px;}}
   .legend{display:none;gap:8px;align-items:center;font-size:7px;font-weight:600;color:var(--tm);}
   .legend-item{display:flex;align-items:center;gap:3px;}.legend-dot{width:6px;height:6px;border-radius:2px;}
   .controls{display:flex;gap:3px;align-items:center;flex-shrink:0;}
@@ -65,7 +66,7 @@
 </head>
 <body>
 <div class="top-bar">
-  <div style="display:flex;align-items:center;"><h1><span class="g">eFootball</span> — Bracket</h1><div class="upd-badge"><span>Updated: 27 Mar 2026, 5:30 PM IST</span></div></div>
+  <div style="display:flex;align-items:center;"><h1><span class="g">eFootball</span> — Bracket</h1><div class="upd-badge"><span>Updated: 27 Mar 2026, 1:00 PM IST</span></div></div>
   <div class="legend"><div class="legend-item"><div class="legend-dot" style="background:var(--teal)"></div>R1</div><div class="legend-item"><div class="legend-dot" style="background:var(--gold)"></div>WB</div><div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div>LB</div><div class="legend-item"><div class="legend-dot" style="background:var(--purple)"></div>GF</div></div>
   <div class="controls"><button class="cb sq" id="zo">−</button><span class="zd" id="zd">32%</span><button class="cb sq" id="zi">+</button><button class="cb sq" id="rv">⟲</button><button class="cb nv" onclick="nv('r1')">R1</button><button class="cb nv" onclick="nv('pools')">Pools</button><button class="cb nv" onclick="nv('wb')">WB</button><button class="cb nv" onclick="nv('lb')">LB</button><button class="cb nv" onclick="nv('gf')">GF</button></div>
 </div>
@@ -93,7 +94,7 @@ function prop(id){const m=M[id];if(!m.done)return;const f=F[id];if(!f)return;con
 function sr(id,w){const m=M[id];m.s1=w===1?2:0;m.s2=w===2?2:0;m.winner=w===1?m.p1:m.p2;m.loser=w===1?m.p2:m.p1;m.done=true;}
 sr('WBPI_1',2);sr('WBPI_2',2);sr('LBPI_1',2);['WBPI_1','WBPI_2','LBPI_1'].forEach(prop);
 sr('CO_1',1);prop('CO_1');
-sr('WBR16_1',1);sr('WBR16_3',1);sr('WBR16_4',2);sr('WBR16_7',1);sr('LBR16_5',1);sr('LBR16_8',1);
+sr('WBR16_1',1);sr('WBR16_3',1);sr('WBR16_4',2);sr('WBR16_7',1);sr('WBR16_8',2);sr('LBR16_5',1);sr('LBR16_8',1);
 Object.keys(M).forEach(id=>{if(M[id].done)prop(id);});
 let svg='',htm='';
 function mr(p){return{x:p.x+MW,y:p.y+HH+SH};}function ml(p){return{x:p.x,y:p.y+HH+SH};}function bc(p){return{x:p.x+MW/2,y:p.y+MH};}

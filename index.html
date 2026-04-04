@@ -66,7 +66,7 @@
 </head>
 <body>
 <div class="top-bar">
-  <div style="display:flex;align-items:center;"><h1><span class="g">eFootball</span> — Bracket</h1><div class="upd-badge"><span>Updated: 3 Apr 2026, 3:00 PM IST</span></div></div>
+  <div style="display:flex;align-items:center;"><h1><span class="g">eFootball</span> — Bracket</h1><div class="upd-badge"><span>Updated: 4 Apr 2026, 1:00 PM IST</span></div></div>
   <div class="legend"><div class="legend-item"><div class="legend-dot" style="background:var(--teal)"></div>R1</div><div class="legend-item"><div class="legend-dot" style="background:var(--gold)"></div>WB</div><div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div>LB</div><div class="legend-item"><div class="legend-dot" style="background:var(--purple)"></div>GF</div></div>
   <div class="controls"><button class="cb sq" id="zo">−</button><span class="zd" id="zd">32%</span><button class="cb sq" id="zi">+</button><button class="cb sq" id="rv">⟲</button><button class="cb nv" onclick="nv('r1')">R1</button><button class="cb nv" onclick="nv('pools')">Pools</button><button class="cb nv" onclick="nv('wb')">WB</button><button class="cb nv" onclick="nv('lb')">LB</button><button class="cb nv" onclick="nv('gf')">GF</button></div>
 </div>
@@ -99,26 +99,32 @@ sr('WBR16_1',1);sr('WBR16_2',2);sr('WBR16_3',1);sr('WBR16_4',2);sr('WBR16_5',2);
 sr('LBR16_1',2);sr('LBR16_2',1);sr('LBR16_4',2);sr('LBR16_5',1);sr('LBR16_6',1);sr('LBR16_7',1);sr('LBR16_8',1);
 // LBR16_3: MADHU & ASHISH both DQ'd - mark MADHU as "winner" to propagate, then handle void
 Object.keys(M).forEach(id=>{if(M[id].done)prop(id);});
-// WB QF results (now WBQF players are filled from WBR16 propagation)
+// WB QF results
 sr('WBQF_1',2); // DIPAMMITRA45 def. MAAHI
 sr('WBQF_2',1); // TSS def. KOKACHI-YT
+sr('WBQF_3',2); // BABLUMUNNA10 def. ABHISHADES
 sr('WBQF_4',2); // HASHTAG_GULLU def. VVVBROTHERS
+Object.keys(M).forEach(id=>{if(M[id].done)prop(id);});
+// WB SF results
+sr('WBSF_1',1); // DIPAMMITRA45 def. TSS
 Object.keys(M).forEach(id=>{if(M[id].done)prop(id);});
 // LB R2 results
 sr('LBR2_1',1); // NAV-KRISHNAN def. FEARLESS189
+sr('LBR2_2',2); // DINESH_MITHRAN def. BADD_PRITT23
 sr('LBR2_4',1); // NANDHU G S def. RANVEER_TRUE
 sr('LBR2_5',1); // KING def. AKKI
 sr('LBR2_6',2); // EF_REVOLUTION def. PUMPFV
 sr('LBR2_7',2); // MOHIT def. ARINDAM_AWASTHI
 sr('LBR2_8',2); // PESHEMAK7 def. KISHORE
 Object.keys(M).forEach(id=>{if(M[id].done)prop(id);});
-// LBR2_3: NITHISH_JR gets BYE (MADHU & ASHISH both DQ'd from LBR16_3)
-// Manually set NITHISH_JR as p1 and give him the win
+// LBR2_3: NITHISH_JR gets BYE
 M['LBR2_3'].p1='NITHISH_JR';M['LBR2_3'].t1=gt('NITHISH_JR');
 M['LBR2_3'].p2='DQ (BYE)';M['LBR2_3'].t2=null;
-sr('LBR2_3',1); // NITHISH_JR advances by BYE
-// Also label LBR16_3 as DQ
+sr('LBR2_3',1);
 M['LBR16_3'].p1='MADHU (DQ)';M['LBR16_3'].p2='ASHISH (DQ)';M['LBR16_3'].t1=null;M['LBR16_3'].t2=null;
+Object.keys(M).forEach(id=>{if(M[id].done)prop(id);});
+// LB R3 results
+sr('LBR3_3',1); // KING def. EF_REVOLUTION
 Object.keys(M).forEach(id=>{if(M[id].done)prop(id);});
 let svg='',htm='';
 function mr(p){return{x:p.x+MW,y:p.y+HH+SH};}function ml(p){return{x:p.x,y:p.y+HH+SH};}function bc(p){return{x:p.x+MW/2,y:p.y+MH};}

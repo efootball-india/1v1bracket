@@ -66,7 +66,7 @@
 </head>
 <body>
 <div class="top-bar">
-  <div style="display:flex;align-items:center;"><h1><span class="g">eFootball</span> — Bracket</h1><div class="upd-badge"><span>Updated: 4 Apr 2026, 1:00 PM IST</span></div></div>
+  <div style="display:flex;align-items:center;"><h1><span class="g">eFootball</span> — Bracket</h1><div class="upd-badge"><span>Updated: 5 Apr 2026, 1:00 PM IST</span></div></div>
   <div class="legend"><div class="legend-item"><div class="legend-dot" style="background:var(--teal)"></div>R1</div><div class="legend-item"><div class="legend-dot" style="background:var(--gold)"></div>WB</div><div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div>LB</div><div class="legend-item"><div class="legend-dot" style="background:var(--purple)"></div>GF</div></div>
   <div class="controls"><button class="cb sq" id="zo">−</button><span class="zd" id="zd">32%</span><button class="cb sq" id="zi">+</button><button class="cb sq" id="rv">⟲</button><button class="cb nv" onclick="nv('r1')">R1</button><button class="cb nv" onclick="nv('pools')">Pools</button><button class="cb nv" onclick="nv('wb')">WB</button><button class="cb nv" onclick="nv('lb')">LB</button><button class="cb nv" onclick="nv('gf')">GF</button></div>
 </div>
@@ -124,7 +124,17 @@ sr('LBR2_3',1);
 M['LBR16_3'].p1='MADHU (DQ)';M['LBR16_3'].p2='ASHISH (DQ)';M['LBR16_3'].t1=null;M['LBR16_3'].t2=null;
 Object.keys(M).forEach(id=>{if(M[id].done)prop(id);});
 // LB R3 results
+sr('LBR3_1',1); // NAV-KRISHNAN def. DINESH_MITHRAN
+sr('LBR3_2',1); // NITHISH_JR def. NANDHU G S
 sr('LBR3_3',1); // KING def. EF_REVOLUTION
+sr('LBR3_4',2); // PESHEMAK7 def. MOHIT
+Object.keys(M).forEach(id=>{if(M[id].done)prop(id);});
+// WB SF results
+sr('WBSF_2',2); // HASHTAG_GULLU def. BABLUMUNNA10
+Object.keys(M).forEach(id=>{if(M[id].done)prop(id);});
+// LB R4: KING gets BYE (ABHISHADES no-show)
+M['LBR4_3'].p1='ABHISHADES (BYE)';M['LBR4_3'].t1=null;
+sr('LBR4_3',2); // KING advances via BYE
 Object.keys(M).forEach(id=>{if(M[id].done)prop(id);});
 let svg='',htm='';
 function mr(p){return{x:p.x+MW,y:p.y+HH+SH};}function ml(p){return{x:p.x,y:p.y+HH+SH};}function bc(p){return{x:p.x+MW/2,y:p.y+MH};}
